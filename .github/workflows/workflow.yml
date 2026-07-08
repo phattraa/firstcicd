@@ -1,9 +1,6 @@
-Name: My Workflow
+name: My Workflow
 
-On:
-  push:
-    branches: [ main ]
-  workflow_dispatch: # Allows you to run it manually
+on: push
 
 jobs:
   myJob:
