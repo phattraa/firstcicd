@@ -11,7 +11,7 @@ on:
         - '.github/workflows/*'
 
     repository_dispatch:
-      types: [after_render_cms]
+      types: ["on-demand-test"]
 
 jobs:
   myJob:
