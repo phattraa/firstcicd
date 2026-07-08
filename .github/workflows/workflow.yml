@@ -1,5 +1,7 @@
 Name: My Workflow
-On:
+
+On: push
+
 jobs:
   myJob:
     runs-on: ubuntu-latest
