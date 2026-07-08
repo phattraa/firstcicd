@@ -3,6 +3,14 @@ name: My Workflow
 on: 
   push:
     branches: [main]
+    paths-ignore:
+      - '.github/workflows/*'
+    pull_request:
+      branches: [main]
+      paths-ignore:
+        - '.github/workflows/*'
+
+    workflow_dispatch:
 
 jobs:
   myJob:
