@@ -7,4 +7,5 @@ jobs:
   myJob:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "From external process ${{ github.event.client_payload.somedata }}"
+       - name: Run a one-line script
+        run: echo Hello, world!
