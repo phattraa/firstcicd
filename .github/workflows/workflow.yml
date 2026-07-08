@@ -23,7 +23,7 @@ jobs:
        - name: Retrieve client payload
          env:
           PAYLOAD_STATUS: ${{ github.event.client_payload.status }}
-         run: echo "Client payload: $PAYLOAD_STATUS"
+         run: echo "Client payload $PAYLOAD_STATUS"
   secondJob:
     runs-on: windows-latest
     needs: myJob
