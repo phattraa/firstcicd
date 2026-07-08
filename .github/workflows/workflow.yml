@@ -25,6 +25,7 @@ jobs:
            echo "Actor: ${{ github.actor }}"
            echo "Ref: ${{ github.ref }}"
            echo "SHA: ${{ github.sha }}"
+           echo "The Database password is ${{ secrets.DB_PASSWORD }}"
   myJob:
     runs-on: ubuntu-latest
     steps:
