@@ -10,7 +10,8 @@ on:
       paths-ignore:
         - '.github/workflows/*'
 
-    workflow_dispatch:
+    repository_dispatch:
+      types: [after_render_cms]
 
 jobs:
   myJob:
