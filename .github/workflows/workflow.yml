@@ -19,6 +19,9 @@ jobs:
     steps:
        - name: Run a one-line script
          run: echo Hello, world!
+         
+       - name: Retrieve client payload
+         run: echo "Client payload: ${{ toJson(github.event.client_payload) }}"
   secondJob:
     runs-on: windows-latest
     needs: myJob
