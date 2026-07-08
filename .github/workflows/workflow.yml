@@ -1,11 +1,8 @@
 Name: My Workflow
-On:
-  repository_dispatch:
-    types:
-      - my_event_type
+On: push
 jobs:
   myJob:
     runs-on: ubuntu-latest
     steps:
        - name: Run a one-line script
-        run: echo Hello, world!
+         run: echo Hello, world!
