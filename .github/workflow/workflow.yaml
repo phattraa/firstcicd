@@ -1,0 +1,10 @@
+Name: My Workflow
+On:
+  repository_dispatch:
+    types:
+      - my_event_type
+jobs:
+  myJob:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "From external process ${{ github.event.client_payload.somedata }}"
