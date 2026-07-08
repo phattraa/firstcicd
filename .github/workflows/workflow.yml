@@ -27,7 +27,7 @@ jobs:
            echo "SHA: ${{ github.sha }}"
            echo "The Database password is ${{ secrets.DB_PASSWORD }}"
   myJob:
-    if: ${{ github.event_name != 'on-demand-test'}}
+    if: ${{ github.event_type != 'on-demand-test'}}
     runs-on: ubuntu-latest
     steps:
        - name: Run a one-line script
@@ -38,7 +38,7 @@ jobs:
           PAYLOAD_STATUS: ${{ github.event.client_payload.status }}
          run: echo "Client payload $PAYLOAD_STATUS"
   secondJob:
-    if: ${{ github.event_name == 'on-demand-test'}}
+    if: ${{ github.event_type == 'on-demand-test'}}
     runs-on: windows-latest
     needs: myJob
     steps:
