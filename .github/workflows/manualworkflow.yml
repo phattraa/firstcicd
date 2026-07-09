@@ -24,6 +24,9 @@ jobs:
           ref: ${{github.ref_name}}
       - name: list files in workspaces
         run: ls ${{github.workspace}}
+      - name: Set an output status
+        id: set_status
+        run: echo "status=success" >> $GITHUB_OUTPUT
   test:
     runs-on: ubuntu-latest
     steps:
