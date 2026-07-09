@@ -16,6 +16,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    outputs:
+      build_status: ${{ steps.set_status.outputs.status }}
     steps:
       - name: Checkosut Source Code
         uses: actions/checkout@v7.0.0
